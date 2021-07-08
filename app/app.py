@@ -15,6 +15,7 @@ try:
 # engine = create_engine(f'postgresql://{connection}')
     cursor = connection.cursor() 
     postgreSQL_select_Query = "select * from heartfailure;"
+    cursor.execute(postgreSQL_select_Query);
     print("Selecting rows from heartfailure table using cursor.fetchone")
     # Create a cursor to perform database operations
 
