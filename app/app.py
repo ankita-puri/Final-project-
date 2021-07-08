@@ -2,6 +2,8 @@
 from flask import Flask, render_template
 # from sqlalchemy import create_engine
 import psycopg2
+from psycopg2 import Error
+
 try:
     connection = psycopg2.connect(user="root",
                                   password="3B_dataanalytics",
@@ -12,7 +14,7 @@ try:
 # connection_string = "root:3B_dataanalytics@mypostgresdb.cd98u61l7amw.ap-southeast-2.rds.amazonaws.com:5432/postgres"
 # engine = create_engine(f'postgresql://{connection}')
     cursor = connection.cursor() 
-    postgreSQL_select_Query = "select * from heartfailure"
+    postgreSQL_select_Query = "select * from heartfailure;"
     print("Selecting rows from heartfailure table using cursor.fetchone")
     # Create a cursor to perform database operations
 
