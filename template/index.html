@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+
+    <title>Death Analysis And Prediction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/tooplate-main.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+
+  </head>
+
+  <body>
+
+    <div class="sequence">
+  
+      <div class="seq-preloader">
+        <svg width="39" height="16" viewBox="0 0 39 16" xmlns="http://www.w3.org/2000/svg" class="seq-preload-indicator"><g fill="#F96D38"><path class="seq-preload-circle seq-preload-circle-1" d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z"/><path class="seq-preload-circle seq-preload-circle-2" d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z"/><path class="seq-preload-circle seq-preload-circle-3" d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z"/></g></svg>
+      </div>
+      
+    </div>
+    
+        <!--div class="logo">
+            <h1>Death Prediction</h1>
+            <h2>E</h2>
+        </div-->
+
+    <nav class="fixed-nav-bar">
+      <h1>Death Analysis And Prediction</h1>
+      <ul>
+          <li><a href="#4">Analysis</a></li>
+          <li><a href="#3">Scatter Plot</a></li>
+          <li><a href="#2">Prediction</a></li>
+          <li><a href="#1">Introduction</a></li>
+          
+      </ul>
+    </nav>
+        <!--nav>
+          <ul>
+            <li><a href="#1"><img src="assets/images/intro-icon.png" alt=""> <em>Introduction</em></a></li>
+            <li><a href="#2"><img src="assets/images/dp-icon.png" alt=""> <em>Prediction</em></a></li>
+            <li><a href="#3"><img src="assets/images/scatter-icon.png" alt=""> <em>Scatter Plot</em></a></li>
+            <li><a href="#4"><img src="assets/images/logo1.png" alt=""> <em>Analysis</em></a></li>
+          </ul>
+        </nav-->
+        
+        <div class="slides">
+          <div class="slide" id="1">
+            <div id="slider-wrapper">
+                <div id="image-slider">
+                  <ul>
+                    <li class="active-img">
+                      <div class="slide-caption">
+                        <!--h2>Death Analysis And Prediction</h2-->
+                      </div>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+  <div class="slide" id="2">
+    <div class="container">
+			<br>
+			<!--Form-->
+			<form action = "{{url_for('predict')}}" method ="POST" >
+				<fieldset>
+				<legend>Heart Attack Prediction </legend><br>
+				  <div class="card card-body" >
+					  <div class="form-group  row">
+						<div class="col-sm-3">
+							<label for="age">Age</label>
+							<input type="number" class="form-control" id="age" name="age" required>
+						</div>
+						</div>
+					  <br>
+					  <div class="form-group  row">
+						  <div class="col-sm">
+							<label for="cp">Smoking</label>
+							<select class="form-control" id="cp" name = "cp" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0">No</option>
+							  <option value = "1">Yes </option>
+							</select>
+						  </div>
+							<div class="col-sm">
+							<label for="dib">Diabeties</label>
+							<select class="form-control" id="dib" name = "dib" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0">No</option>
+							  <option value = "1">Yes </option>
+							</select>
+						  </div>
+							<div class="col-sm">
+							<label for="bp">High Blood Pressure</label>
+							<select class="form-control" id="bp" name = "bp" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0">No</option>
+							  <option value = "1">Yes </option>
+							</select>
+						  </div>
+							<div class="col-sm">
+							<label for="anm">Anaemia</label>
+							<select class="form-control" id="anm" name = "anm" required>
+							  <option disabled selected value> -- Select an Option -- </option>
+							  <option value = "0">No</option>
+							  <option value = "1">Yes </option>
+							</select>
+						  </div>
+						</div>
+					  
+					  <br>
+					  <div class="form-group">
+						<input class="btn btn-primary" type="submit" value="Result">
+					  </div>
+					  
+					  <!--Prediction Result-->
+					  <div id ="result">
+							<strong style="color:red">{{result}}</strong>
+					 </div>
+				     </div>
+			 </fieldset>
+			</form>
+			
+		</div>
+  </div>
+
+
+<!-- For Scatter plot-->
+  <div class="slide" id="3">
+    <div class="container">
+			<br>
+			
+			
+			
+		</div>
+  </div>
+  
+  <!-- For Analysis-->
+  <div class="slide" id="4">
+    <div class='tableauPlaceholder' id='viz1625922131765' style='position: relative'>
+    <noscript>
+        <a href='#'><img alt='Death Events ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Deathprediction&#47;DeathEvents&#47;1_rss.png' style='border: none' /></a>
+    </noscript>
+    <object class='tableauViz'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+        <param name='name' value='Deathprediction&#47;DeathEvents' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Deathprediction&#47;DeathEvents&#47;1.png' /> 
+        <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-GB' />
+    </object>
+    </div>                
+    <script type='text/javascript'>                    
+      var divElement = document.getElementById('viz1625922131765');                    
+      var vizElement = divElement.getElementsByTagName('object')[0];                    
+      if ( divElement.offsetWidth > 800 ) { 
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.4)+'px';
+      } 
+      else if ( divElement.offsetWidth > 500 ) { 
+        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.4)+'px';
+        } 
+      else { vizElement.style.width='100%';vizElement.style.height='1227px';
+      }                     
+      var scriptElement = document.createElement('script');                    
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
+    </div>
+  </div>
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/accordations.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            // navigation click actions 
+            $('.scroll-link').on('click', function(event){
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 750);
+            });
+            // scroll to top action
+            $('.scroll-top').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({scrollTop:0}, 'slow');         
+            });
+            // mobile nav toggle
+            $('#nav-toggle').on('click', function (event) {
+                event.preventDefault();
+                $('#main-nav').toggleClass("open");
+            });
+        });
+        // scroll function
+        function scrollToID(id, speed){
+            var offSet = 0;
+            var targetOffset = $(id).offset().top - offSet;
+            var mainNav = $('#main-nav');
+            $('html,body').animate({scrollTop:targetOffset}, speed);
+            if (mainNav.hasClass("open")) {
+                mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+                mainNav.removeClass("open");
+            }
+        }
+        if (typeof console === "undefined") {
+            console = {
+                log: function() { }
+            };
+        }
+    </script>
+
+  </body>
+</html>
