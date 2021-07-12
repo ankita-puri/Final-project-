@@ -1,6 +1,5 @@
 
-from flask import Flask, render_template
-from flask.wrappers import Request
+from flask import Flask, request, render_template
 import psycopg2
 from psycopg2 import Error
 import pickle
@@ -39,7 +38,7 @@ def home_view():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    inputs = [float(x) for x in Request.form.values()]
+    inputs = [float(x) for x in request.form.values()]
     print(inputs)
     final_inputs = [inputs]
     prediction = model.predict(final_inputs)
