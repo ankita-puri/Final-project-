@@ -36,7 +36,7 @@ def home_view():
         print("PostgreSQL connection is closed")
         return render_template("index.html")
 
-@app.route('/predict',methods=['POST'])
+@app.route('/',methods=['POST'])
 def predict():
     inputs = [float(x) for x in request.form.values()]
     print(inputs)
