@@ -2,6 +2,8 @@
 from flask import Flask, render_template
 import psycopg2
 from psycopg2 import Error
+import pickle
+
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
