@@ -3,6 +3,7 @@ from flask import Flask, request, render_template
 import psycopg2
 from psycopg2 import Error
 import pickle
+from sklearn.preprocessing import MinMaxScaler
 
 
 app = Flask(__name__)
@@ -41,7 +42,10 @@ def predict():
     inputs = [float(x) for x in request.form.values()]
     print(inputs)
     final_inputs = [inputs]
-    prediction = model.predict(final_inputs)
+    scaler = MinMaxScaler()
+    X = scaler.fit_transform(final_inputs)
+    prediction = model.predict(X)
+    
     if prediction == 1:
       return render_template('index.html', prediction_text='Person passed away due to heart failure')
     else:
