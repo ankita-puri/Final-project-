@@ -194,7 +194,7 @@ function dead_or_alive(result){
 
   // Import Data from the data.csv File & Execute Everything Below
 
-  url = d3.csv("data.csv")
+  url = d3.csv("https://dataanalytics-2021.s3.ap-southeast-2.amazonaws.com/heart_failure_clinical_records_dataset.csv")
   .then(function(acsData) {
 
 
