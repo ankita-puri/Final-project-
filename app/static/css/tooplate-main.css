@@ -208,7 +208,6 @@ body {
   transition: -webkit-transform 0.8s ease;
   transition: transform 0.8s ease;
   transition: transform 0.8s ease, -webkit-transform 0.8s ease;
-  padding: 50px 0 0;
 }
 .slides .slide {
   height: 100vh;
@@ -253,7 +252,7 @@ body {
 }
 
 .slides .slide:nth-child(1) {
-  padding: 50px 0 0;
+  padding: 30px 0 0;
 }
 
 
@@ -261,7 +260,7 @@ body {
   background-color: black;
   background-position: fixed;
   text-decoration-color: white;
-  margin-top: 60px;
+  margin-top: 10px;
 }
 /* Slide 1 Stlye */
 #slider-wrapper{
@@ -358,7 +357,7 @@ body {
 /* Slide 2 Style */
 
 .slide h1 {
-  margin-top: 50px;
+  margin-top: 20px;
   height: 60px; 
   font-size: 10px;
   text-transform: uppercase;
