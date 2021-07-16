@@ -25,19 +25,6 @@
 
   <body>
 
-    <div class="sequence">
-  
-      <div class="seq-preloader">
-        <svg width="39" height="16" viewBox="0 0 39 16" xmlns="http://www.w3.org/2000/svg" class="seq-preload-indicator"><g fill="#F96D38"><path class="seq-preload-circle seq-preload-circle-1" d="M3.999 12.012c2.209 0 3.999-1.791 3.999-3.999s-1.79-3.999-3.999-3.999-3.999 1.791-3.999 3.999 1.79 3.999 3.999 3.999z"/><path class="seq-preload-circle seq-preload-circle-2" d="M15.996 13.468c3.018 0 5.465-2.447 5.465-5.466 0-3.018-2.447-5.465-5.465-5.465-3.019 0-5.466 2.447-5.466 5.465 0 3.019 2.447 5.466 5.466 5.466z"/><path class="seq-preload-circle seq-preload-circle-3" d="M31.322 15.334c4.049 0 7.332-3.282 7.332-7.332 0-4.049-3.282-7.332-7.332-7.332s-7.332 3.283-7.332 7.332c0 4.05 3.283 7.332 7.332 7.332z"/></g></svg>
-      </div>
-      
-    </div>
-    
-        <!--div class="logo">
-            <h1>Death Prediction</h1>
-            <h2>E</h2>
-        </div-->
-
     <nav class="fixed-nav-bar">
       <h1>Death Analysis And Prediction</h1>
       <ul>
@@ -48,15 +35,7 @@
           
       </ul>
     </nav>
-        <!--nav>
-          <ul>
-            <li><a href="#1"><img src="static/images/intro-icon.png" alt=""> <em>Introduction</em></a></li>
-            <li><a href="#2"><img src="static/images/dp-icon.png" alt=""> <em>Prediction</em></a></li>
-            <li><a href="#3"><img src="static/images/scatter-icon.png" alt=""> <em>Scatter Plot</em></a></li>
-            <li><a href="#4"><img src="static/images/logo1.png" alt=""> <em>Analysis</em></a></li>
-          </ul>
-        </nav-->
-        
+               
         <div class="slides">
           <div class="slide" id="1">
             <div id="slider-wrapper">
@@ -111,49 +90,45 @@
   <div class="slide" id="3">
     <div class="container">
 			<br>   <!-- Navigation Bar -->
-         <div class="row">
-        <div class="col-xs-12 col-md-12"><h1>Heart Disease Risk Factors, Is there a corellation?</h1></div>
-         <div class="row">
-			<div class="col-xs-12 col-md-9">          
-				<div id="scatter">
-            <!-- Append Chart Here -->
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-md-9">
-			<div class="article">
-				<h3>Observations between Health Data and Mortality </h3>
-				<p>Medical proffessionals are required to analyse vast amounts of data to enable good diagnosis.
-					The graph allows the user to interact with numerous data which have been attributed to heart disease and 
-					mortality arising from it. 
-					What is noted from interacting with this data is that it is impossible to draw any firm conclusions using standard visual or processing
-					or regression modelling. 
-					This is to say that there may be a corellation between the data and mortality but that human observation cannot 
-					find the links. 
-              
-				</p>
-				<br>
-				<h3>What other processes could be deployed to make predictions on mortality?</h3>
-				<p>Machine Learning is a great tool to use for predictive analytics for "Big Data". The models that can be deployed
-				to find links for predictive analytics vary but the objecives remain the same in the analysis of health indicators and mortality associated with heart disease.
-				The models we have used are K- Nearest Neighbour (KNN), Random forest, Logistic regression and Support Vector Machine (SVM) to predict an outcome of mortality. Each of these models
-				Present their own strengths in prediction. By comparing the succes ratio of these models a preffered model can be used.
-				</p>
-			</div>
-			</div>
-		</div>
-	</div>
-    <!-- Footer -->
-    <div id="footer">
-      <p>&copy; Team 1, Ankita, Kritika, Josh, Will, James </p>
-    </div>
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
-        <script type="text/javascript" src="../static/js/app.js"></script>
+        <div class="row">
+          <div class="slide3-caption1"><h1>Heart Disease Risk Factors, Is there a corellation?</h1></div>
+            <!--div class="row"-->
+			        <div class="slide3-scatterplot">          
+				        <div id="scatter">
+                  <!-- Append Chart Here -->
+				        </div>
+			        </div>
+		        <!--/div-->
+        </div>
+		    <div class="row">
+		  	  <div class="slide3-caption2">
+			      <div class="article">
+				      <h3>Observations between Health Data and Mortality </h3>
+				        <p>Medical proffessionals are required to analyse vast amounts of data to enable good diagnosis.
+					        The graph allows the user to interact with numerous data which have been attributed to heart disease and 
+					        mortality arising from it. 
+					        What is noted from interacting with this data is that it is impossible to draw any firm conclusions using standard visual or processing
+					        or regression modelling. 
+					        This is to say that there may be a corellation between the data and mortality but that human observation cannot 
+					        find the links.             
+				        </p>
+				        <br>
+				      <h3>What other processes could be deployed to make predictions on mortality?</h3>
+				        <p>Machine Learning is a great tool to use for predictive analytics for "Big Data". The models that can be deployed
+				        to find links for predictive analytics vary but the objecives remain the same in the analysis of health indicators and mortality associated with heart disease.
+				        The models we have used are K- Nearest Neighbour (KNN), Random forest, Logistic regression and Support Vector Machine (SVM) to predict an outcome of mortality. Each of these models
+				        Present their own strengths in prediction. By comparing the succes ratio of these models a preffered model can be used.
+				        </p>
+			      </div>
+			    </div>
+		    </div>
+	  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+    <script type="text/javascript" src="../static/js/app.js"></script>
 			
-		</div>
-  </div>
+	</div>
+  <!--/div-->
   
 
   <!-- For Analysis-->
